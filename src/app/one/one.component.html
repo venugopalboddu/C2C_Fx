@@ -1,0 +1,18 @@
+<div *ngIf="sdata">
+    <h2>Component One</h2>
+    <table>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>        
+        </tr>
+        <tr *ngFor="let d of Fetchdata">
+            <!-- <td (click)="getUserId(d.userId)">{{d.userId}}</td> -->
+            <td [routerLink]="['/two', d.userId]">{{d.userId}}</td>
+            <td>{{d.id}}</td>
+            <td>{{d.title}}</td>
+            <td>{{d.body}}</td>
+        </tr>
+    </table>
+</div>
